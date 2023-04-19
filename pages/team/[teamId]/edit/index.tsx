@@ -60,8 +60,20 @@ function TeamEditPage() {
             ]
         })
     }
-    const saveTeam = () => {
-        console.log("SAVE")
+    const saveTeam = async () => {
+        if (!confirm("Save team?")) return;
+        const response = await axios.patch(`${config.backendUrl}/private/teams`,
+            {
+                team: { ...team, name: teamName || team.name },
+
+            },
+            {
+                headers: {
+                    'content-type': 'application/json',
+                    'Authorization': `Bearer ${user.token}`,
+                }
+            },
+        );
     }
     const removeTeam = async () => {
         if (!confirm("Remove team?")) return;
