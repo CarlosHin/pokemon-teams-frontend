@@ -30,7 +30,7 @@ export default function Create() {
         <MainLayout>
             {teams.map(team => (<div key={team.name} className="border-solid border-2 border-sky-100 p-10 mt-4">
                 <p>
-                    Team {team.name}
+                    {team.name}
                 </p>
                 <Link href={`/team/${team._id}/edit`}>
                     <button
