@@ -74,6 +74,9 @@ function TeamEditPage() {
                 }
             },
         );
+        if (response.status === 200) {
+            alert("Team Saved");
+        }
     }
     const removeTeam = async () => {
         if (!confirm("Remove team?")) return;
