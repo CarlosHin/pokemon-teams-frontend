@@ -1,4 +1,9 @@
-https://pokemon-teams-backend.onrender.com/api
+https://pokemon-teams-frontend.vercel.app/
+
+user: aaa 
+
+password: aaa
+
 
 ## Run in Local
 create .env.local file
